@@ -1,9 +1,13 @@
-<h1>logins#home</h1>
-<%= form_tag( url: new_user_path)  %>
+<h1>Log In</h1>
+<%= form_tag  url: sessions_login_path do %>
 <%=label_tag :email %>
-<%=email_field_tag :email %>
+<%=email_field_tag :email %><br><br>
 
+<%=label_tag :password %>
+<%=email_field_tag :password %><br><br>
 
+<%= submit_tag "Log In" %>
+<% end %>
 
 
 

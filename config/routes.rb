@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
 
   resources :users, :posts
 
-  root :to => 'logins#home'
+  root :to => 'sessions#home'
 
-  post '/login' => "logins#login"
+  post '/login' => "sessions#login"
+  post 'sessions/login' => 'sessions#login'
 end
