@@ -1,0 +1,16 @@
+<h1>posts#index</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field  :content%>
+
+  <%= f.submit %>
+<% end %>
+
+
+  <ul>
+    <% @posts.each do |post| %>
+    <li>  <%= post.content %> </li>
+    <p><em>by:</em> <%= post.author.username %></p>
+  </ul>
+  <% end %>

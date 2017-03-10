@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+include ApplicationHelper
 
   def login
     @user = User.find(username: params[:username])
@@ -12,7 +13,7 @@ class SessionsController < ApplicationController
 
   def logout
     session.clear
-    redirect :back
+    redirect_to :back
   end
 
 

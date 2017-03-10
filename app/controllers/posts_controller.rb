@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-  
+
   def index
+    @posts = Post.recent
+    @post = Post.new
   end
 
   def new

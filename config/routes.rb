@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   post '/login' => "sessions#login"
   post 'sessions/login' => 'sessions#login'
+  get '/sessions/logout' => 'sessions#logout'
 end
